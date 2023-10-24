@@ -1,7 +1,7 @@
 /**
 *Programmer:Zoha Ahmed
 *Date:24 October 2023
-*Desc:question 2,lab 6
+*Desc:question 4,lab 8
 */
 #include<stdio.h>
 int main(){
