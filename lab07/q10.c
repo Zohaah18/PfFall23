@@ -1,6 +1,6 @@
 /**
 * programmer:Zoha Ahmed
-* Desc: question 9 lab 7
+* Desc: question 10 lab 7
 * Date: 16 October,2023
 *
 */
