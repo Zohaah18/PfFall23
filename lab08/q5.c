@@ -6,7 +6,7 @@
 */
 
 #include <stdio.h>
-  int carusage(int Carnum, int daysofweek){
+  int decidecarusage(int Carnum, int daysofweek){
     if( Carnum % 2 == 0 && daysofweek % 2 == 0){
       return 1;
 }
@@ -25,7 +25,7 @@
     printf("Enter the days of the week (1 - 7): ");
     scanf("%d" ,&days);
 
-  int shouldusecar = carusage(car , days);
+  int shouldusecar = decidecarusage(car , days);
  if (shouldusecar){
   printf("You can use your car today!\n");
 }
