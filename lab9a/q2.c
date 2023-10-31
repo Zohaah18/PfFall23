@@ -1,7 +1,7 @@
 /**
 *Programmer:Zoha Ahmed
 *Date: 31 October 2023
-*Desc: question 1, lab 9a
+*Desc: question 2, lab 9a
 */
 #include <stdio.h>
 void reverse(int *arr, int size){
