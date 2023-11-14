@@ -1,3 +1,8 @@
+/** programmer: Zoha Ahmed
+* Date: 14 Nov, 2023
+* Desc: task 1, lab 10
+/**
+  
 #include <stdio.h>
 void printanyarray(void*array, int size, char type){
   int datatype;
