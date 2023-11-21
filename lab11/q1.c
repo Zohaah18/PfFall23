@@ -61,12 +61,12 @@ int main() {
     college.numstudents = 0;
 
     // Adding students
-    addStudent(&college, 101, "John Doe", "Computer Science", "B.Tech", 2020);
-    addStudent(&college, 102, "Jane Smith", "Electrical Engineering", "B.E", 2021);
-    addStudent(&college, 103, "Bob Johnson", "Mechanical Engineering", "B.E", 2020);
+    addStudent(&college, 101, "John Doe", "Computer Science", "B.Tech", 2022);
+    addStudent(&college, 102, "Jane Smith", "Electrical Engineering", "B.E", 2023);
+    addStudent(&college, 103, "Bob Johnson", "Mechanical Engineering", "B.E", 2022);
 
     // Print names of all students who joined in a particular year
-    int year_to_search = 2020;
+    int year_to_search = 2022;
     printStudentsByYear(&college, year_to_search);
 
     // Print the data of a student whose roll number is given
