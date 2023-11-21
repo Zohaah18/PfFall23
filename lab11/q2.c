@@ -1,3 +1,7 @@
+/** programmer: Zoha Ahmed
+* Date: 21 Nov, 2023
+* Desc: ques 2, lab 11
+/**
 #include <stdio.h>
 #include <string.h>
 
