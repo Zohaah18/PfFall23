@@ -1,3 +1,7 @@
+/** programmer: Zoha Ahmed
+* Date: 21 Nov, 2023
+* Desc: ques 3, lab 11
+/**
 #include <stdio.h>
 
 // Define a structure for storing date information
