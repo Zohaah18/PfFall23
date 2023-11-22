@@ -1,3 +1,7 @@
+/** programmer: Zoha Ahmed
+* Date: 14 Nov, 2023
+* Desc: task 3, lab 10
+/**
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -17,7 +21,6 @@ void Primes(int **arr, int rows, int cols) {
 
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            // Find the next prime number
             while (!isPrime(current)) {
                 ++current;
             }
