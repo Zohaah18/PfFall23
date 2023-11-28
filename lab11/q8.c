@@ -1,3 +1,7 @@
+/** programmer: Zoha Ahmed
+* Date: 21 Nov, 2023
+* Desc: ques 8, lab 11
+/**
 #include <stdio.h>
 
 // Function to calculate the volume of a box
