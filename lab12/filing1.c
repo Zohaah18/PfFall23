@@ -1,40 +1,56 @@
-import csv
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-def read_and_display_csv(file_path):
-    with open(file_path, 'r') as csvfile:
-        # Create a CSV reader
-        csv_reader = csv.reader(csvfile)
+#define MAX_COLUMNS 100
+#define MAX_COLUMN_WIDTH 50
 
-        # Read the header
-        header = next(csv_reader)
-        num_columns = len(header)
+void read_and_display_csv(const char *file_path) {
+    FILE *file = fopen(file_path, "r");
+    if (file == NULL) {
+        perror("Error opening file");
+        return;
+    }
 
-        # Initialize counters
-        num_rows = 0
+    char line[MAX_COLUMNS * MAX_COLUMN_WIDTH];
+    char *token;
 
-        # Print header
-        print(", ".join(header))
-        print()
+    // Read header
+    fgets(line, sizeof(line), file);
+    printf("%s", line);
 
-        # Iterate through rows and count
-        for row in csv_reader:
-            num_rows += 1
+    // Print a blank line after the header
+    printf("\n");
 
-        # Print total rows and columns
-        print(f"Total Rows: {num_rows}")
-        print(f"Total Columns: {num_columns}")
-        print()
+    // Count columns in the header
+    int num_columns = 0;
+    token = strtok(line, ",");
+    while (token != NULL && num_columns < MAX_COLUMNS) {
+        num_columns++;
+        token = strtok(NULL, ",");
+    }
 
-        # Rewind the CSV file to the beginning
-        csvfile.seek(0)
+    // Initialize counters
+    int num_rows = 0;
 
-        # Skip the header for displaying data
-        next(csv_reader)
+    // Read and print data
+    while (fgets(line, sizeof(line), file) != NULL) {
+        num_rows++;
+        printf("%s", line);
+    }
 
-        # Display data in tabular form
-        for row in csv_reader:
-            print("|".join(row))
+    // Print total rows and columns
+    printf("\nTotal Rows: %d\n", num_rows);
+    printf("Total Columns: %d\n", num_columns);
 
-# Replace 'your_file.csv' with the actual path to your CSV file
-file_path = 'your_file.csv'
-read_and_display_csv(file_path)
+    fclose(file);
+}
+
+int main() {
+    // Replace "your_file.csv" with the actual path to your CSV file
+    const char *file_path = "your_file.csv";
+    
+    read_and_display_csv(file_path);
+
+    return 0;
+}
